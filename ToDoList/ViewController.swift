@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     //MARK: - IBOutlets
     
     @IBOutlet private var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
         
     }
 
