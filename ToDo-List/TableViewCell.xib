@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="ToDo_List" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="75.299999999999997" translatesAutoresizingMaskIntoConstraints="NO" id="jCL-wz-eml">
+                        <rect key="frame" x="70" y="5.0000000000000018" width="230" height="28.666666666666671"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                        <color key="textColor" systemColor="systemIndigoColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijL-29-IlE">
+                        <rect key="frame" x="70" y="43.666666666666664" width="230" height="20.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ll-1C-2sY">
+                        <rect key="frame" x="70" y="99" width="36" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huJ-s1-pgF">
+                        <rect key="frame" x="14" y="47.666666666666657" width="48" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system"/>
+                        <connections>
+                            <action selector="checkmark:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hAn-VM-NSk"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQF-8N-P40">
+                        <rect key="frame" x="258" y="90" width="52" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="delete.left" catalog="system">
+                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="deleteTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jec-Ut-OTj"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCP-pK-GV9">
+                        <rect key="frame" x="212" y="90" width="46" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
+                        <connections>
+                            <action selector="editTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="K0g-8R-TQD"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ijL-29-IlE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="70" id="2Ww-oU-eJV"/>
+                    <constraint firstAttribute="trailing" secondItem="ijL-29-IlE" secondAttribute="trailing" constant="20" id="7AQ-bQ-veW"/>
+                    <constraint firstAttribute="bottom" secondItem="UQF-8N-P40" secondAttribute="bottom" constant="5" id="BNg-ov-uac"/>
+                    <constraint firstItem="ijL-29-IlE" firstAttribute="top" secondItem="jCL-wz-eml" secondAttribute="bottom" constant="10" id="BXw-dV-La8"/>
+                    <constraint firstAttribute="trailing" secondItem="UQF-8N-P40" secondAttribute="trailing" constant="10" id="CkF-0n-lhY"/>
+                    <constraint firstItem="huJ-s1-pgF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CzJ-T4-8nf"/>
+                    <constraint firstAttribute="bottom" secondItem="1Ll-1C-2sY" secondAttribute="bottom" constant="10" id="IoV-7h-1ET"/>
+                    <constraint firstAttribute="trailing" secondItem="jCL-wz-eml" secondAttribute="trailing" constant="20" id="MBG-88-5WF"/>
+                    <constraint firstItem="huJ-s1-pgF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="ULc-vG-9ww"/>
+                    <constraint firstItem="jCL-wz-eml" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="dFA-mN-sm5"/>
+                    <constraint firstItem="1Ll-1C-2sY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="70" id="iXa-VG-y7o"/>
+                    <constraint firstItem="UQF-8N-P40" firstAttribute="leading" secondItem="tCP-pK-GV9" secondAttribute="trailing" id="uv8-49-aWv"/>
+                    <constraint firstItem="jCL-wz-eml" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="70" id="y9A-JQ-hIf"/>
+                    <constraint firstAttribute="bottom" secondItem="tCP-pK-GV9" secondAttribute="bottom" constant="5" id="zkm-ur-tEe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="Header" destination="jCL-wz-eml" id="Cqc-wZ-EDa"/>
+                <outlet property="checkmark" destination="huJ-s1-pgF" id="V4v-Aj-ylg"/>
+                <outlet property="createdAt" destination="1Ll-1C-2sY" id="926-gp-GJG"/>
+                <outlet property="delete" destination="UQF-8N-P40" id="fTd-v9-slU"/>
+                <outlet property="detail" destination="ijL-29-IlE" id="lYG-yO-FJL"/>
+                <outlet property="edit" destination="tCP-pK-GV9" id="oo4-gG-aOr"/>
+            </connections>
+            <point key="canvasLocation" x="76" y="-12"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="delete.left" catalog="system" width="128" height="102"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
